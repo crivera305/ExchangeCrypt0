@@ -3970,3 +3970,29 @@
 		flex-direction: column;
 	}
 }
+
+
+@media screen and (min-width: 1280px) {
+	.icon-morph-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+		max-height: 250px;
+		position: relative;
+		top: -20px;
+	}
+	.icon-morph {
+		display: block;
+		margin: 20px auto;
+		max-width:100%;
+		width: 25vw;
+		height: 25vw;
+		max-height: 250px;
+		overflow: visible;
+		margin-top: 0;
+	}
+	#sidebar {
+		padding-top: 0;
+	}
+}

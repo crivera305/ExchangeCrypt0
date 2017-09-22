@@ -1,4 +1,23 @@
 $(document).ready(function(){
+
+    var $iconMorphWrapper = $(".icon-morph-wrapper");
+
+    function moveMorph(){
+        if ($(window).width() < 1280) {
+            $( "#intro-inner" ).append( $iconMorphWrapper);
+        }
+        else {
+            $( "#sidebar-inner" ).prepend( $iconMorphWrapper);
+        }
+    }
+
+    moveMorph();
+
+    $(window).resize(function() {
+        moveMorph();
+    });
+
+
 // DYNAMIC SINGLE PATH SVG ANIMATION
     var tl = new TimelineMax({repeat:-1, repeatDelay:0, delay:1});
     TweenMax.set(".icon-morph-first", {fill: '#b1176b'});
