@@ -8,6 +8,28 @@
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
     </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    {# Javascript Libraries #}
+    {% javascripts
+
+    'js/tether.min.js'
+    'js/bootstrap.min.js'
+    'js/jquery.lazyload.js'
+    'js/jquery.slick.min.js'
+    'js/jquery.gsap.min.js'
+    'js/TweenMax.min.js'
+    'js/TweenMax.min.js'
+    'js/TimelineMax.min.js'
+    'js/TweenMax.min.js'
+
+    'js/scroll-banner.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% block javascripts %}{% endblock %}
 </html>
