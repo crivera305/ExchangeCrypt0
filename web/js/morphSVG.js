@@ -37,8 +37,11 @@ $(document).ready(function(){
         'dash' : '#0079c2',
         'ltc': '#bababa',
         'neo': '#5ac200',
-        'fct' : '#8fc0dc',
-        'bat' : '#b1176b'
+        // 'fct' : '#8fc0dc',
+        'bat' : '#b1176b',
+        'dgb' : '#002254',
+        'sia' : '#00dca7',
+        'steem' : '#24a3fa'
     };
 
 
