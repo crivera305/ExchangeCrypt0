@@ -78,9 +78,11 @@
                 <div class="features">
                     {% for ticker in getCoinTicker() %}
                         <section>
-                            <img height="32" width="32" class="icon major ticker-img mr-1"
-                                 src="https://files.coinmarketcap.com/static/img/coins/32x32/{{ slugify(ticker.name) }}.png"
-                                 alt="">
+                            <div class="img-wrapper">
+                                <img height="32" width="32" class="icon major ticker-img mr-1"
+                                     src="https://files.coinmarketcap.com/static/img/coins/32x32/{{ slugify(ticker.name) }}.png"
+                                     alt="">
+                            </div>
                             <h3>{{ ticker.name }}</h3>
                             <ul class="actions">
                                 <li>
