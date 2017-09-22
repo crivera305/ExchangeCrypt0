@@ -1,0 +1,61 @@
+<div class="scroll-banner w-100 border-b">
+    <div class="ticker-scroll scroll-coins d-flex">
+        {% for ticker in getCoinTicker() %}
+            <div class="ticker-item d-flex align-items-center" data-container="body" data-toggle="tooltip"
+                 data-html="true" data-placement="bottom" title="<div style='width:180px;'>
+                    <div class='d-flex justify-content-between w-100 border-b'>
+                        <span>Name:</span>
+                        <span>{{ ticker.name }}</span>
+                    </div>
+                    <div class='d-flex justify-content-between w-100 border-b'>
+                        <span>BTC:</span>
+                        <span>{{ ticker.priceBtc|number_format(8) }}</span>
+                    </div>
+                    <div class='d-flex justify-content-between w-100 border-b'>
+                        <span>USD</span>
+                        <span>${{ ticker.priceUsd|number_format(2) }}</span>
+                    </div>
+                    <div class='d-flex justify-content-between w-100 border-b'>
+                        <span>1-hour:</span>
+                        <span class='text-{% if ticker.percentChange1h|first == '-' %}danger{% else %}success{% endif %}'>{{ ticker.percentChange1h }}%</span>
+                    </div>
+                    <div class='d-flex justify-content-between w-100 border-b'>
+                        <span>24-hour:</span>
+                        <span class='text-{% if ticker.percentChange24h|first == '-' %}danger{% else %}success{% endif %}'>{{ ticker.percentChange24h }}%</span>
+                    </div>
+                    <div class='d-flex justify-content-between w-100 border-b'>
+                        <span>7-day:</span>
+                        <span class='text-{% if ticker.percentChange7d|first == '-' %}danger{% else %}success{% endif %}'>{{ ticker.percentChange7d }}%</span>
+                    </div>
+                    <div class='d-flex justify-content-between w-100 border-b'>
+                        <span>24h Vol:</span>
+                        <span'>${{ ticker.volume24Hour | number_format }}</span>
+                    </div>
+                    <div class='d-flex justify-content-between w-100'>
+                        <span>Mkt Cap:</span>
+                        <span'>${{ ticker.marketCap | number_format }}</span>
+                    </div>
+                    </div>">
+                <a href="{{ path('route_coin',{slug: ticker.symbol|lower}) }}">
+                    <div class="d-flex align-items-center">
+                        <img height="16" width="16" class="ticker-img mr-1"
+                             src="https://files.coinmarketcap.com/static/img/coins/16x16/{{ slugify(ticker.name) }}.png"
+                             alt="">
+                        <p class="ticker-sym mb-0">{{ ticker.symbol }}</p>
+                    </div>
+                </a>
+                &nbsp;
+                <div class="ticker-price mb-0 d-flex justify-content-center align-items-center">
+                    <p class="ml-1 mb-0 text-{% if ticker.percentChange24h|first == '-' %}danger{% else %}success{% endif %}">{{ ticker.percentChange24h }}</p>
+                    <p class="mb-0 text-{% if ticker.percentChange24h|first == '-' %}danger{% else %}success{% endif %}">
+                        %</p>
+                    <p class="mb-0"><i
+                                class="fa fa-caret-{% if ticker.percentChange24h|first == '-' %}down{% else %}up{% endif %} text-{% if ticker.percentChange24h|first == '-' %}danger{% else %}success{% endif %}"></i>
+                    </p>
+                    <p class="mb-0 ml-2">$</p>
+                    <p class="mb-0">{{ ticker.priceUsd|number_format(2) }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

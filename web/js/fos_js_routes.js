@@ -1,0 +1,1 @@
+fos.Router.setData({"base_url":"","routes":{"route_ajax_follow_coin":{"tokens":[["variable","\/","[^\/]++","symbol"],["text","\/ajax\/follow\/coin"]],"defaults":[],"requirements":[],"hosttokens":[]}},"prefix":"","host":"localhost","scheme":"http"});
