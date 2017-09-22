@@ -3918,6 +3918,12 @@
 
 		}
 
+@media screen and (max-width: 1280px) {
+	#sidebar + #wrapper {
+		padding-top: 0;
+	}
+}
+
 .d-flex {
 	display: flex;
 }
