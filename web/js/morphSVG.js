@@ -39,7 +39,8 @@ $(document).ready(function(){
         'neo': '#5ac200',
         // 'fct' : '#8fc0dc',
         'bat' : '#b1176b',
-        'dgb' : '#002254',
+        'dgb' : '#007cd6',
+        'dgb' : '#007cd6',
         'sia' : '#00dca7',
         'steem' : '#24a3fa'
     };
