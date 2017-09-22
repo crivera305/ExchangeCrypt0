@@ -3,7 +3,7 @@ $(document).ready(function(){
     var $iconMorphWrapper = $(".icon-morph-wrapper");
 
     function moveMorph(){
-        if ($(window).width() < 1280) {
+        if ($(window).width() < 1281) {
             $( "#intro-inner" ).append( $iconMorphWrapper);
         }
         else {
@@ -13,9 +13,16 @@ $(document).ready(function(){
 
     moveMorph();
 
-    $(window).resize(function() {
-        moveMorph();
+    var resizeTimer;
+
+    $(window).on('resize', function(e) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+             moveMorph();
+        }, 250);
     });
+
+
 
 
 // DYNAMIC SINGLE PATH SVG ANIMATION
