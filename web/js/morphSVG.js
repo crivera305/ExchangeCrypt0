@@ -55,10 +55,10 @@ $(document).ready(function(){
             var color = colorCodes[coin];
             console.log(color);
             if (index > 0) {
-                tl.to(firstShape, 2, {morphSVG:el, fill: color, ease: Elastic.easeOut.config(1, 0.4)}, "+=2");
+                tl.to(firstShape, 1, {morphSVG:el, fill: color, ease: Power2.easeOut}, "+=2");
             }
         });
-        tl.to(firstShape, 2, {morphSVG:firstShape, fill: '#b1176b', ease: Elastic.easeOut.config(1, 0.4)}, "+=2");
+        tl.to(firstShape, 1, {morphSVG:firstShape, fill: '#b1176b', ease: Power2.easeOut}, "+=2");
     }
 
     morphSvg();
