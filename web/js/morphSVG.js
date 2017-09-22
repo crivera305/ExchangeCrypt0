@@ -1,6 +1,7 @@
 $(document).ready(function(){
 // DYNAMIC SINGLE PATH SVG ANIMATION
     var tl = new TimelineMax({repeat:-1, repeatDelay:0, delay:1});
+    TweenMax.set(".icon-morph-first", {fill: '#b1176b'});
 
     var colorCodes = {
         'eth' : '#000',
@@ -18,6 +19,7 @@ $(document).ready(function(){
     console.log(colorCodes);
 
     TweenMax.set(".icon-morph-first", {fill: '#b1176b'});
+
     function morphSvg(){
         var firstShape = $(".icon-morph-first"),
             shapes = $("[data-icon-morph]");
@@ -27,10 +29,10 @@ $(document).ready(function(){
             var color = colorCodes[coin];
             console.log(color);
             if (index > 0) {
-                tl.to(firstShape, 1.5, {morphSVG:el, fill: color, ease: Elastic.easeOut.config(1, 0.4)}, "+=1.5");
+                tl.to(firstShape, 2, {morphSVG:el, fill: color, ease: Elastic.easeOut.config(1, 0.4)}, "+=2");
             }
         });
-        tl.to(firstShape, 1.5, {morphSVG:firstShape, fill: '#b1176b', ease: Elastic.easeOut.config(1, 0.4)}, "+=1.5");
+        tl.to(firstShape, 2, {morphSVG:firstShape, fill: '#b1176b', ease: Elastic.easeOut.config(1, 0.4)}, "+=2");
     }
 
     morphSvg();
