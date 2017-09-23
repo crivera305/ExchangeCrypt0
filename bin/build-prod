@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+printf '\PRODUCTION BUILD SCRIPT\n\n'
+
+export SYMFONY_ENV=prod
+
+composer install --no-dev --optimize-autoloader
+php app/console cache:clear --env=prod
+php app/console doctrine:schema:update --dump-sql --env=prod
+find app/cache -type d -exec chmod 777 {} \;
+php app/console assetic:dump --env=prod --no-debug
