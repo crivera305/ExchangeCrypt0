@@ -7,33 +7,33 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <style>
-        .scroll-banner {
-            background: #fff;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-            height: 24px;
-            border-bottom: solid 1px #d2d2d2; }
-        .scroll-banner.tokens {
-            background: #ededed; }
-        .scroll-banner .ticker-scroll {
-            position: absolute;
-            border-bottom: 1px #ebebeb;
-        }
-        .scroll-banner .ticker-scroll .ticker-item {
-            margin-right: 1.5rem; }
-        .scroll-banner .ticker-scroll .ticker-item p {
-            font-size: 12px !important; }
+    {#<style>#}
+        {#.scroll-banner {#}
+            {#background: #fff;#}
+            {#max-width: 100%;#}
+            {#overflow: hidden;#}
+            {#position: relative;#}
+            {#height: 24px;#}
+            {#border-bottom: solid 1px #d2d2d2; }#}
+        {#.scroll-banner.tokens {#}
+            {#background: #ededed; }#}
+        {#.scroll-banner .ticker-scroll {#}
+            {#position: absolute;#}
+            {#border-bottom: 1px #ebebeb;#}
+        {#}#}
+        {#.scroll-banner .ticker-scroll .ticker-item {#}
+            {#margin-right: 1.5rem; }#}
+        {#.scroll-banner .ticker-scroll .ticker-item p {#}
+            {#font-size: 12px !important; }#}
 
-    </style>
+    {#</style>#}
 {% endblock %}
 
 {% block body %}
 
-    <header id="header" class="fixed-top">,
-        {% include ':partial:scroll-banner.html.twig' %}
-    </header>
+    {#<header id="header" class="fixed-top">,#}
+        {#{% include ':partial:scroll-banner.html.twig' %}#}
+    {#</header>#}
 
     <!-- Sidebar -->
     <section id="sidebar">
@@ -43,7 +43,7 @@
                     <li><a href="#intro">Exchange Crypt0</a></li>
                     <li><a href="#one">Exchange</a></li>
                     <li><a href="#two">Our Network</a></li>
-                    <li><a href="#three">Get in touch</a></li>
+                    {#<li><a href="#three">Get in touch</a></li>#}
                 </ul>
             </nav>
         </div>
@@ -73,8 +73,8 @@
         <!-- Two -->
         <section id="one" class="wrapper style3 fade-up">
             <div class="inner">
-                <h2>What we do</h2>
-                <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+                <h2>Cryptocurrencies We Exchange</h2>
+                <p>We support over 53 cryptocurrency conversions. Below is a list of the most popular cryptocurrency exchanges we handle.</p>
                 <div class="features">
                     {% for ticker in getCoinTicker() %}
                         <section>
@@ -108,11 +108,11 @@
                 <div class="content">
                     <div class="inner">
                         <h2>24HourCrypto</h2>
-
+                        <p>Latest Crypto Currency Bitcoing & Alt coin News and Videos</p>
                         <ul class="actions">
                             <li>
-                                <a href="https://24hourcrypto.com"
-                                   target="_blank" class="button changellyButton">View  24HourCrypto</a>
+                                <a href="http://24hourcrypto.com"
+                                   target="_blank" class="button">View  24HourCrypto</a>
                             </li>
                         </ul>
                     </div>
@@ -122,11 +122,12 @@
                 <div class="content">
                     <div class="inner">
                         <h2>CryptoScreener</h2>
+                        <p>Provides Filters and Alerts for Bitcoin and Alt coins to make finding & researching cryptocurrencies that much easier</p>
 
                         <ul class="actions">
                             <li>
-                                <a href="https://cryptoscreener.com"
-                                   target="_blank" class="button changellyButton">View  CryptoScreener</a>
+                                <a href="http://cryptoscreener.com"
+                                   target="_blank" class="button">View  CryptoScreener</a>
                             </li>
                         </ul>
                     </div>
@@ -139,8 +140,8 @@
 
                         <ul class="actions">
                             <li>
-                                <a href="https://cryptix.com"
-                                   target="_blank" class="button changellyButton">View Cryptix</a>
+                                <a href="http://cryptix.com"
+                                   target="_blank" class="button">View Cryptix</a>
                             </li>
                         </ul>
                     </div>
@@ -148,7 +149,7 @@
             </section>
         </section>
         <!-- Three -->
-        <section id="three" class="wrapper style1 fade-up">
+        {#<section id="three" class="wrapper style1 fade-up">
             <div class="inner">
                 <h2>Get in touch</h2>
                 <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -202,7 +203,7 @@
                     </section>
                 </div>
             </div>
-        </section>
+        </section>#}
 
     </div>
 
